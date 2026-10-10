@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes gi| Your Note-Taking App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>QuickNotes</h1>
+    <p>Capture ideas before they disappear.</p>
+  </header>
+
+  <main>
+    <section class="section-card" aria-labelledby="add-heading">
+      <h2 id="add-heading">Add a note</h2>
+
+      <form id="note-form">
+        <div class="form-group">
+          <label for="note-input">Your note</label>
+          <input
+            type="text"
+            id="note-input"
+            placeholder="Write something to remember..."
+            maxlength="500"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="note-category">Category</label>
+          <select id="note-category">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+          </select>
+        </div>
+
+        <button type="submit">Add Note</button>
+      </form>
+
+      <p id="error-message" role="alert" aria-live="polite"></p>
+      <p id="char-count">0 / 200 characters</p>
+    </section>
+
+    <section class="section-card" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Your notes</h2>
+
+      <label for="search-input">Search notes</label>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search your notes..."
+      >
+
+      <p id="note-count" aria-live="polite">You have no notes yet.</p>
+
+      <ul id="notes-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes. Keep your ideas organized.</p>
+  </footer>
+</body>
+</html>
